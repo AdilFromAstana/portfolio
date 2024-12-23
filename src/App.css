@@ -1,0 +1,22 @@
+/* App container styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.app-header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.app-footer {
+  position: absolute;
+  bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+}

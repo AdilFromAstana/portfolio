@@ -1,0 +1,19 @@
+.animated-text {
+  overflow: hidden;
+  height: 2.5rem; /* Высота одного элемента */
+  position: relative;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 2rem;
+  color: #555;
+  height: 2.5rem; /* Должна совпадать с высотой контейнера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
