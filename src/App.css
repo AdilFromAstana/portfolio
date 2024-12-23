@@ -28,7 +28,7 @@ html {
   z-index: 1;
   background: black;
 }
-*/ .person-photo {
+.person-photo {
   width: 100%;
   height: auto;
 }
