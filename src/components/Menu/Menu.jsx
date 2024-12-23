@@ -3,8 +3,6 @@ import { gsap } from "gsap";
 import "./Menu.css"; // Перенесем стили в CSS файл
 import AnimatedText from "../AnimatedText/AnimatedText";
 
-const words = ["world!", "React!", "developer!", "everybody!"];
-
 const MenuButton = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -36,7 +34,7 @@ const MenuButton = () => {
   return (
     <>
       <div>
-        <AnimatedText words={words} interval={2000} />
+        <AnimatedText />
         <button className="menu-button" onClick={handleMenuToggle}>
           {isMenuOpen ? "Close Menu" : "Open Menu"}
         </button>

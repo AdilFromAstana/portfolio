@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./AnimatedText.css";
 
-const AnimatedText = ({ words, interval }) => {
+const AnimatedText = () => {
+  const interval = 2000;
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = ["деньги!", "нервы!", "настроение!", "энергию!", "время!"];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -12,14 +14,25 @@ const AnimatedText = ({ words, interval }) => {
   }, [words.length, interval]);
 
   return (
-    <div style={{ position: "fixed", top: "20px", left: "20px", zIndex: 1100 }}>
-      <div className="static-text" style={{ fontSize: "3rem" }}>
-        Hello
-      </div>
+    <div
+      style={{
+        position: "fixed",
+        top: "20px",
+        left: "20px",
+        zIndex: 1100,
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "start",
+        gap: "8px",
+      }}
+    >
+      <div style={{ fontSize: "2rem", color: "white" }}>Сохраню вам</div>
       <div className="animated-text">
         <div
-          className="text-wrapper"
           style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "start",
             transform: `translateY(-${
               currentWordIndex * (100 / words.length)
             }%)`,
@@ -27,7 +40,7 @@ const AnimatedText = ({ words, interval }) => {
           }}
         >
           {words.map((word, index) => (
-            <div key={index} className="text">
+            <div key={index} className="text" style={{ color: "white" }}>
               {word}
             </div>
           ))}
