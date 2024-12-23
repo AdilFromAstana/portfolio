@@ -1,12 +1,12 @@
-import AnimatedText from "./components/AnimatedText/AnimatedText";
-import Menu from "./components/Menu/Menu";
+import Header from "./components/Header/Header";
+import ScrollEffect from "./components/ScrollEffect/ScrollEffect";
+import "./App.css";
 
 function App() {
-  const words = ["world!", "bob!", "users!", "everybody!"];
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <AnimatedText words={words} interval={3000} />
-      <Menu />
+    <div>
+      {/* <Header /> */}
+      <ScrollEffect />
     </div>
   );
 }

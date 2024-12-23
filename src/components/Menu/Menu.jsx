@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { gsap } from "gsap";
 import "./Menu.css"; // Перенесем стили в CSS файл
+import AnimatedText from "../AnimatedText/AnimatedText";
+
+const words = ["world!", "React!", "developer!", "everybody!"];
 
 const MenuButton = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,9 +35,12 @@ const MenuButton = () => {
 
   return (
     <>
-      <button className="menu-button" onClick={handleMenuToggle}>
-        {isMenuOpen ? "Close Menu" : "Open Menu"}
-      </button>
+      <div>
+        <AnimatedText words={words} interval={2000} />
+        <button className="menu-button" onClick={handleMenuToggle}>
+          {isMenuOpen ? "Close Menu" : "Open Menu"}
+        </button>
+      </div>
       <div className="menu-overlay">
         <div className="menu-content">
           <button>Option 1</button>

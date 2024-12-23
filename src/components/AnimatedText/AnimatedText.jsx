@@ -12,7 +12,7 @@ const AnimatedText = ({ words, interval }) => {
   }, [words.length, interval]);
 
   return (
-    <div>
+    <div style={{ position: "fixed", top: "20px", left: "20px", zIndex: 1100 }}>
       <div className="static-text" style={{ fontSize: "3rem" }}>
         Hello
       </div>
