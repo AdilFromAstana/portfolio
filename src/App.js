@@ -1,4 +1,3 @@
-import Header from "./components/Header/Header";
 import ScrollEffect from "./components/ScrollEffect/ScrollEffect";
 import "./App.css";
 

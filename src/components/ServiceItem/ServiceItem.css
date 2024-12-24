@@ -1,13 +1,12 @@
 .service-item {
   background: white;
-  padding: 30px;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transform: translateX(100%);
   opacity: 0;
   transition: transform 0.5s ease, opacity 0.5s ease;
   width: 80%; /* Элементы занимают 80% ширины */
-  max-width: 800px; /* Максимальная ширина для больших экранов */
   margin: 20px auto;
 }
 
@@ -19,7 +18,7 @@
 
 .service-item p {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: black;
 }
@@ -27,4 +26,24 @@
 /* Элементы с чередованием сторон */
 .service-item:nth-child(odd) {
   transform: translateX(-100%);
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 768px) {
+  .service-item {
+    width: 85%; /* Увеличиваем ширину для маленьких экранов */
+  }
+}
+
+@media (min-width: 768px) {
+  .service-item {
+    width: 45%; /* Увеличиваем ширину для маленьких экранов */
+  }
+}
+
+/* Адаптив для очень больших экранов */
+@media (min-width: 1200px) {
+  .service-item {
+    width: 40%; /* Уменьшаем ширину, чтобы не растягивать элемент */
+  }
 }

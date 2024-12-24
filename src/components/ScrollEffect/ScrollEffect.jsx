@@ -73,8 +73,7 @@ const ScrollEffect = () => {
         </div>
       </div>
 
-      {/* Контент после параллакса */}
-      <div className="content">
+      <div className="content" id="content">
         <h1>Welcome to the next section</h1>
         <p>Keep scrolling to explore more content!</p>
         <div className="services-section">

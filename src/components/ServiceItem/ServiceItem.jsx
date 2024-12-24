@@ -3,6 +3,20 @@ import "./ServiceItem.css";
 
 const ServiceItem = ({ title, description, index }) => {
   const [visibility, setVisibility] = useState(0); // Процент видимости элемента
+  const [isMobile, setIsMobile] = useState(false); // Состояние для мобильного устройства
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // Проверяем, мобильное ли устройство
+    };
+
+    handleResize(); // Проверяем при загрузке
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -30,7 +44,9 @@ const ServiceItem = ({ title, description, index }) => {
   const translateValue =
     visibility < 0.5
       ? `${(1 - visibility) * 80}%` // Двигается меньше на первых 50%
-      : `45%`; // Останавливается на 30% ширины
+      : isMobile
+      ? `0%` // Для телефонов
+      : `45%`; // Для больших экранов
 
   return (
     <div
