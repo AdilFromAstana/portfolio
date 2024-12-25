@@ -7,6 +7,7 @@ import controll from "../../images/controll.png";
 import realInterest from "../../images/real_interest.png";
 import saveMoney from "../../images/save_money.png";
 import speedFlexible from "../../images/speed_flexible.png";
+import Footer from "../Footer/Footer";
 
 const ScrollEffect = () => {
   const [scrollValue, setScrollValue] = useState(0);
@@ -99,6 +100,7 @@ const ScrollEffect = () => {
           ))}
         </div>
         <Marquee />
+        {/* <Footer /> */}
       </div>
     </div>
   );
