@@ -44,6 +44,8 @@
 @media (max-width: 768px) {
   .service-item {
     width: 85%; /* Увеличиваем ширину для маленьких экранов */
+    display: flex;
+    flex-direction: column;
   }
 }
 
