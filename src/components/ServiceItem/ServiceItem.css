@@ -8,19 +8,31 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
   width: 80%; /* Элементы занимают 80% ширины */
   margin: 20px auto;
+  display: grid;
+  grid-template-columns: 50% 40%;
+  justify-content: space-between;
+}
+
+.service-item img {
+  width: 100%; /* Изображение занимает 100% ширины родителя */
+  height: 100%; /* Высота адаптируется к блоку */
+  object-fit: contain; /* Масштабирует изображение внутри блока, сохраняя пропорции */
+  transition: all 0.3s ease; /* Плавное изменение размеров */
 }
 
 .service-item h2 {
   margin: 0 0 10px;
   font-size: 2rem;
+  text-align: left;
   color: black;
 }
 
-.service-item p {
+.service-item span {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   color: black;
+  text-align: left;
 }
 
 /* Элементы с чередованием сторон */

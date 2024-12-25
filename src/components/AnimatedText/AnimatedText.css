@@ -37,7 +37,17 @@
 }
 
 @media (max-width: 768px) {
+  .white-text,
+  .black-text {
+    font-size: 1.5rem;
+  }
+
   .animated-text-container {
     flex-direction: column; /* Меняем направление на столбец для телефонов */
+  }
+
+  .animated-text,
+  .text {
+    height: 2rem;
   }
 }

@@ -1,0 +1,90 @@
+.marquee {
+  height: 40vh;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+/* Анимация для каждой строки */
+.marquee .marqueeone {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee .marqueetwo {
+  animation: marquee 30s linear 7.5s infinite;
+}
+
+.marquee .marqueethree {
+  animation: marquee 30s linear 15s infinite;
+}
+
+.marquee .marqueefour {
+  animation: marquee 30s linear 22.5s infinite;
+}
+
+/* Общие стили для строк */
+.marquee .marqueeone,
+.marquee .marqueetwo,
+.marquee .marqueethree,
+.marquee .marqueefour {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  height: 35vh;
+  display: grid; /* Используем grid вместо flex */
+  grid-template-columns: repeat(2, 50%); /* 5 равных столбцов */
+}
+
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+/* Ключевые кадры анимации */
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+/* Стили для карточек */
+.marquee-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Запрещаем сжатие карточек */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 1vw;
+  padding: 10px;
+}
+
+.marquee-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.marquee-item h2 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.marquee-item span {
+  margin: 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+}

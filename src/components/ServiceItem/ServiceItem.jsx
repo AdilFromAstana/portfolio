@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./ServiceItem.css";
 
-const ServiceItem = ({ title, description, index }) => {
+const ServiceItem = ({ title, description, index, imageUrl }) => {
   const [visibility, setVisibility] = useState(0); // Процент видимости элемента
   const [isMobile, setIsMobile] = useState(false); // Состояние для мобильного устройства
 
@@ -57,8 +57,17 @@ const ServiceItem = ({ title, description, index }) => {
         opacity: opacityValue,
       }}
     >
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "start",
+        }}
+      >
+        <h2>{title}</h2>
+        <span>{description}</span>
+      </div>
+      <img src={imageUrl} alt="" />
     </div>
   );
 };
