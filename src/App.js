@@ -2,12 +2,7 @@ import ScrollEffect from "./components/ScrollEffect/ScrollEffect";
 import "./App.css";
 
 function App() {
-  return (
-    <div>
-      {/* <Header /> */}
-      <ScrollEffect />
-    </div>
-  );
+  return <ScrollEffect />;
 }
 
 export default App;

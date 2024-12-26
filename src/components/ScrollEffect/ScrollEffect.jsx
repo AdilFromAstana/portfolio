@@ -100,7 +100,7 @@ const ScrollEffect = () => {
           ))}
         </div>
         <Marquee />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
