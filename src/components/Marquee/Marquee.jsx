@@ -11,9 +11,9 @@ import subscription from "../../images/subscription.png";
 import useWindowSize from "../../customHooks/useWindowWidth";
 
 const Marquee = () => {
-  const { isMobile } = useWindowSize();
+  const { width } = useWindowSize();
   const serviceCount = 4;
-  const widthPercent = isMobile ? 80 : 50;
+  const widthPercent = width <= 768 ? 80 : 50;
   const firstRowStartPosition = 125;
   const secondRowStartPosition = 100;
 
@@ -21,12 +21,10 @@ const Marquee = () => {
     {
       id: "first",
       startPosition: `${firstRowStartPosition}%`,
-      middlePosition: `-${
-        widthPercent * serviceCount * 2 - firstRowStartPosition
-      }%`,
-      endPosition: `-${
-        widthPercent * serviceCount * 2 - firstRowStartPosition
-      }%`,
+      middlePosition: `-${widthPercent * serviceCount * 2 - firstRowStartPosition
+        }%`,
+      endPosition: `-${widthPercent * serviceCount * 2 - firstRowStartPosition
+        }%`,
       services: [
         {
           imageUrl: crmSystem,
@@ -57,12 +55,10 @@ const Marquee = () => {
     {
       id: "second",
       startPosition: `${secondRowStartPosition}%`,
-      middlePosition: `-${
-        widthPercent * serviceCount * 2 - secondRowStartPosition
-      }%`,
-      endPosition: `-${
-        widthPercent * serviceCount * 2 - secondRowStartPosition
-      }%`,
+      middlePosition: `-${widthPercent * serviceCount * 2 - secondRowStartPosition
+        }%`,
+      endPosition: `-${widthPercent * serviceCount * 2 - secondRowStartPosition
+        }%`,
       services: [
         {
           imageUrl: booking,
@@ -114,14 +110,7 @@ const Marquee = () => {
                     {marquee.services.map((service) => {
                       return (
                         <div className="marquee-item" key={service.title}>
-                          <div
-                            className="marquee-item-text"
-                            style={{
-                              display: "flex",
-                              flexDirection: "column",
-                              alignItems: "start",
-                            }}
-                          >
+                          <div className="marquee-item-text">
                             <h2>{service.title}</h2>
                             <span>{service.description}</span>
                           </div>

@@ -42,9 +42,11 @@
   0% {
     left: var(--start-position);
   }
+
   50% {
     left: var(--middle-position);
   }
+
   100% {
     left: var(--end-position);
   }
@@ -65,6 +67,13 @@
   padding: 10px;
 }
 
+.marquee-item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start
+}
+
 .marquee-item-text h2 {
   margin: 0 0 10px;
   font-size: 1.5rem;
@@ -81,35 +90,35 @@
 }
 
 .marquee-item img {
-  width: 100%;
+  aspect-ratio: 1 / 1;
   height: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1920px) {
   .marquee {
-    height: 40vh;
+    height: 35vh;
+  }
+
+  .marquee-item {
+    height: 32.5vh;
   }
 
   .marquee .marqueeone {
     animation: marquee 120s linear infinite;
   }
+
   .marquee .marqueetwo {
     animation: marquee 120s linear 30s infinite;
   }
+
   .marquee .marqueethree {
     animation: marquee 120s linear 60s infinite;
   }
+
   .marquee .marqueefour {
     animation: marquee 120s linear 90s infinite;
-  }
-
-  .marquee .marqueeone,
-  .marquee .marqueetwo,
-  .marquee .marqueethree,
-  .marquee .marqueefour {
-    height: 37.5vh;
   }
 
   .marquee:hover div {
@@ -121,26 +130,93 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
   }
 
+  .marquee-item-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .marquee-item-text span {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+}
+
+@media (max-width: 1920px) {
+  .marquee {
+    height: 25vh;
+  }
+
   .marquee-item {
-    height: inherit;
-    display: grid;
-    grid-template-columns: 1fr 35%;
-    justify-content: space-between;
+    height: 22.5vh;
+  }
+
+  .marquee-item-text span {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 1400px) {
+  .marquee {
+    height: 20vh;
+  }
+
+  .marquee-item {
+    height: 17.5vh;
+  }
+
+  .marquee-item-text span {
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 1200px) {
+  .marquee {
+    height: 20vh;
+  }
+
+  .marquee-item {
+    height: 17.5vh;
+    justify-content: flex-end;
+  }
+
+  .marquee-item-text {
+    width: 100%;
+    align-items: center;
   }
 
   .marquee-item-text h2 {
-    margin: 0 0 10px;
-    font-size: 2.5rem;
-    color: black;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .marquee-item-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .marquee-item-text {
+    justify-content: flex-start;
   }
 
   .marquee-item-text span {
     display: block;
-    margin: 0;
-    text-align: left;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    height: 20vh;
   }
 
+  .marquee-item {
+    height: 17.5vh;
+  }
+
+  .marquee-item-text h2 {
+    font-size: 2rem;
+  }
 }
