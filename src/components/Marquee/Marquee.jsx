@@ -125,7 +125,7 @@ const Marquee = () => {
                             <h2>{service.title}</h2>
                             <span>{service.description}</span>
                           </div>
-                          {/* <img src={service.imageUrl} alt="imageUrl" /> */}
+                          <img src={service.imageUrl} alt="imageUrl" />
                         </div>
                       );
                     })}
