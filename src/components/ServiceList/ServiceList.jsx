@@ -40,16 +40,19 @@ const ServiceList = () => {
   ];
 
   return (
-    <div className="services-section">
-      {services.map((service, index) => (
-        <ServiceItem
-          imageUrl={service.imageUrl}
-          key={index}
-          title={service.title}
-          description={service.description}
-          index={index}
-        />
-      ))}
+    <div>
+      <div>Почему я?</div>
+      <div className="services-section">
+        {services.map((service, index) => (
+          <ServiceItem
+            imageUrl={service.imageUrl}
+            key={index}
+            title={service.title}
+            description={service.description}
+            index={index}
+          />
+        ))}
+      </div>
     </div>
   );
 };

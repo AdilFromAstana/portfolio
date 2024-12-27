@@ -94,41 +94,44 @@ const Marquee = () => {
 
   return (
     <div>
-      {marqueeArray.map((marquee) => {
-        return (
-          <div
-            key={marquee.id}
-            className="marquee"
-            style={{
-              "--start-position": marquee.startPosition,
-              "--middle-position": marquee.middlePosition,
-              "--end-position": marquee.endPosition,
-              "--service-count": `${serviceCount}`,
-              "--width-percent": `${widthPercent}%`,
-            }}
-          >
-            {["marqueeone", "marqueetwo", "marqueethree", "marqueefour"].map(
-              (className) => {
-                return (
-                  <div className={className} key={className}>
-                    {marquee.services.map((service) => {
-                      return (
-                        <div className="marquee-item" key={service.title}>
-                          <div className="marquee-item-text">
-                            <h2>{service.title}</h2>
-                            <span>{service.description}</span>
+      <h2>Что я могу предложить</h2>
+      <div>
+        {marqueeArray.map((marquee) => {
+          return (
+            <div
+              key={marquee.id}
+              className="marquee"
+              style={{
+                "--start-position": marquee.startPosition,
+                "--middle-position": marquee.middlePosition,
+                "--end-position": marquee.endPosition,
+                "--service-count": `${serviceCount}`,
+                "--width-percent": `${widthPercent}%`,
+              }}
+            >
+              {["marqueeone", "marqueetwo", "marqueethree", "marqueefour"].map(
+                (className) => {
+                  return (
+                    <div className={className} key={className}>
+                      {marquee.services.map((service) => {
+                        return (
+                          <div className="marquee-item" key={service.title}>
+                            <div className="marquee-item-text">
+                              <h2>{service.title}</h2>
+                              <span>{service.description}</span>
+                            </div>
+                            <img src={service.imageUrl} alt="imageUrl" />
                           </div>
-                          <img src={service.imageUrl} alt="imageUrl" />
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              }
-            )}
-          </div>
-        );
-      })}
+                        );
+                      })}
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

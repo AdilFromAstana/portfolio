@@ -57,7 +57,7 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
       style={{
         transform: `translateX(${index % 2 === 0 ? "-" : ""}${translateValue})`,
         opacity: opacityValue,
-        height: "25vh"
+        height: "25vh",
       }}
     >
       <div

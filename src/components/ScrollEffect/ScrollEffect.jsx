@@ -3,6 +3,8 @@ import Header from "../Header/Header";
 import Marquee from "../Marquee/Marquee";
 import Footer from "../Footer/Footer";
 import ServiceList from "../ServiceList/ServiceList";
+import Slider3D from "../Slider3D/Slider3D";
+import GoodsSlider from "../GoodsSlider/GoodsSlider";
 
 const ScrollEffect = () => {
   const [scrollValue, setScrollValue] = useState(0);
@@ -50,6 +52,8 @@ const ScrollEffect = () => {
       <div className="content" id="content">
         <ServiceList />
         <Marquee />
+        <Slider3D />
+        <GoodsSlider />
         <Footer />
       </div>
     </div>
