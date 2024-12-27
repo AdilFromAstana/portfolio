@@ -6,6 +6,7 @@
   border-bottom: 1px solid black;
   display: flex;
   align-items: center;
+  margin-bottom: 0.75rem;
 }
 
 /* Анимация для каждой строки */
@@ -30,6 +31,7 @@
 .marquee .marqueetwo,
 .marquee .marqueethree,
 .marquee .marqueefour {
+  height: 100%;
   position: absolute;
   width: 100%;
   left: 100%;
@@ -54,24 +56,25 @@
 
 /* Стили для карточек */
 .marquee-item {
-  height: 17.5vh;
+  box-sizing: border-box;
+  height: 100%;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-right: 1vw;
+  margin-right: 1rem;
   padding: 10px;
+  overflow: hidden;
 }
 
 .marquee-item-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start
+  align-items: start;
 }
 
 .marquee-item-text h2 {
@@ -101,10 +104,6 @@
     height: 35vh;
   }
 
-  .marquee-item {
-    height: 32.5vh;
-  }
-
   .marquee .marqueeone {
     animation: marquee 120s linear infinite;
   }
@@ -125,11 +124,6 @@
     animation-play-state: paused;
   }
 
-  .marquee-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-  }
-
   .marquee-item-text h2 {
     font-size: 2.5rem;
   }
@@ -138,16 +132,11 @@
     font-size: 1.5rem;
     line-height: 1.5;
   }
-
 }
 
 @media (max-width: 1920px) {
   .marquee {
     height: 25vh;
-  }
-
-  .marquee-item {
-    height: 22.5vh;
   }
 
   .marquee-item-text span {
@@ -159,10 +148,6 @@
 @media (max-width: 1400px) {
   .marquee {
     height: 20vh;
-  }
-
-  .marquee-item {
-    height: 17.5vh;
   }
 
   .marquee-item-text span {
@@ -177,7 +162,6 @@
   }
 
   .marquee-item {
-    height: 17.5vh;
     justify-content: flex-end;
   }
 
@@ -210,10 +194,6 @@
 @media (max-width: 768px) {
   .marquee {
     height: 20vh;
-  }
-
-  .marquee-item {
-    height: 17.5vh;
   }
 
   .marquee-item-text h2 {

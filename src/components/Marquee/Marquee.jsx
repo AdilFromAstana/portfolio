@@ -93,7 +93,7 @@ const Marquee = () => {
   ];
 
   return (
-    <>
+    <div>
       {marqueeArray.map((marquee) => {
         return (
           <div
@@ -129,7 +129,7 @@ const Marquee = () => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 

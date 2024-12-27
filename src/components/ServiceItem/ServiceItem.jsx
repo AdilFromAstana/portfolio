@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./ServiceItem.css";
 
 const ServiceItem = ({ title, description, index, imageUrl }) => {
-  const [visibility, setVisibility] = useState(0); // Процент видимости элемента
-  const [isMobile, setIsMobile] = useState(false); // Состояние для мобильного устройства
+  const [visibility, setVisibility] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,44 +19,40 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
   }, []);
 
   useEffect(() => {
-    if (!isMobile) {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          const visiblePercentage = Math.min(
-            Math.max(entry.intersectionRatio, 0),
-            1
-          );
-          setVisibility(visiblePercentage); // Устанавливаем процент видимости
-        },
-        {
-          threshold: Array.from({ length: 101 }, (_, i) => i / 100), // Генерируем массив от 0 до 1 с шагом 0.01
-        }
-      );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const visiblePercentage = Math.min(
+          Math.max(entry.intersectionRatio, 0),
+          1
+        );
+        setVisibility(visiblePercentage); // Устанавливаем процент видимости
+      },
+      {
+        threshold: Array.from({ length: 101 }, (_, i) => i / 100), // Генерируем массив от 0 до 1 с шагом 0.01
+      }
+    );
 
-      const element = document.querySelector(`#service-${index}`);
-      if (element) observer.observe(element);
+    const element = document.querySelector(`#service-${index}`);
+    if (element) observer.observe(element);
 
-      return () => {
-        if (element) observer.unobserve(element);
-      };
-    }
-  }, [index]);
+    return () => {
+      if (element) observer.unobserve(element);
+    };
+  }, [isMobile, index]);
 
   const opacityValue = Math.min(visibility * 2, 1); // Плавное увеличение прозрачности
   const translateValue =
-    visibility < 0.5
+    visibility < 1
       ? `${(1 - visibility) * 80}%` // Двигается меньше на первых 50%
-      : isMobile
-        ? `0%` // Для телефонов
-        : `45%`; // Для больших экранов
+      : `0%`; // Для больших экранов
 
   return (
     <div
       id={`service-${index}`}
       className="service-item"
       style={{
-        transform: isMobile ? 'inherit' : `translateX(${index % 2 === 0 ? "-" : ""}${translateValue})`,
-        opacity: isMobile ? '1' : opacityValue,
+        transform: `translateX(${index % 2 === 0 ? "-" : ""}${translateValue})`,
+        opacity: opacityValue,
       }}
     >
       <div
