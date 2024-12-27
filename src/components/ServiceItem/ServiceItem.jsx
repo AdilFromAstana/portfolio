@@ -27,7 +27,7 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
           1
         );
         setVisibility(visiblePercentage); // Устанавливаем процент видимости
-        if (visiblePercentage > 0.5) {
+        if (visiblePercentage > 0.9) {
           setHasBeenVisible(true); // Если элемент виден больше чем на 50%, запоминаем это
         }
       },
@@ -48,7 +48,7 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
   const translateValue =
     hasBeenVisible || visibility >= 1
       ? `0%` // Если был видим, остаётся на месте
-      : `${(1 - visibility) * 80}%`; // Плавное движение
+      : `${(1 - visibility) * 100}%`; // Плавное движение
 
   return (
     <div
