@@ -71,7 +71,7 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
         <h2>{title}</h2>
         <span>{description}</span>
       </div>
-      <img src={imageUrl} alt="" />
+      {/* <img src={imageUrl} alt="" /> */}
     </div>
   );
 };
