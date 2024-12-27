@@ -57,7 +57,6 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
       style={{
         transform: `translateX(${index % 2 === 0 ? "-" : ""}${translateValue})`,
         opacity: opacityValue,
-        transition: "transform 0.5s ease, opacity 0.5s ease", // Добавляем плавные переходы
         height: "25vh"
       }}
     >
