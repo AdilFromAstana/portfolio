@@ -13,7 +13,7 @@ import useWindowSize from "../../customHooks/useWindowWidth";
 const Marquee = () => {
   const { width } = useWindowSize();
   const serviceCount = 4;
-  const widthPercent = width <= 768 ? 80 : 50;
+  const widthPercent = width <= 768 ? 90 : 50;
   const firstRowStartPosition = 125;
   const secondRowStartPosition = 100;
 
@@ -21,10 +21,12 @@ const Marquee = () => {
     {
       id: "first",
       startPosition: `${firstRowStartPosition}%`,
-      middlePosition: `-${widthPercent * serviceCount * 2 - firstRowStartPosition
-        }%`,
-      endPosition: `-${widthPercent * serviceCount * 2 - firstRowStartPosition
-        }%`,
+      middlePosition: `-${
+        widthPercent * serviceCount * 2 - firstRowStartPosition
+      }%`,
+      endPosition: `-${
+        widthPercent * serviceCount * 2 - firstRowStartPosition
+      }%`,
       services: [
         {
           imageUrl: crmSystem,
@@ -55,10 +57,12 @@ const Marquee = () => {
     {
       id: "second",
       startPosition: `${secondRowStartPosition}%`,
-      middlePosition: `-${widthPercent * serviceCount * 2 - secondRowStartPosition
-        }%`,
-      endPosition: `-${widthPercent * serviceCount * 2 - secondRowStartPosition
-        }%`,
+      middlePosition: `-${
+        widthPercent * serviceCount * 2 - secondRowStartPosition
+      }%`,
+      endPosition: `-${
+        widthPercent * serviceCount * 2 - secondRowStartPosition
+      }%`,
       services: [
         {
           imageUrl: booking,
