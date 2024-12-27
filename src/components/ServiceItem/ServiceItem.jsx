@@ -3,6 +3,7 @@ import "./ServiceItem.css";
 
 const ServiceItem = ({ title, description, index, imageUrl }) => {
   const [visibility, setVisibility] = useState(0);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false); // Новое состояние
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -26,6 +27,9 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
           1
         );
         setVisibility(visiblePercentage); // Устанавливаем процент видимости
+        if (visiblePercentage > 0.5) {
+          setHasBeenVisible(true); // Если элемент виден больше чем на 50%, запоминаем это
+        }
       },
       {
         threshold: Array.from({ length: 101 }, (_, i) => i / 100), // Генерируем массив от 0 до 1 с шагом 0.01
@@ -40,11 +44,11 @@ const ServiceItem = ({ title, description, index, imageUrl }) => {
     };
   }, [isMobile, index]);
 
-  const opacityValue = Math.min(visibility * 2, 1); // Плавное увеличение прозрачности
+  const opacityValue = hasBeenVisible ? 1 : Math.min(visibility * 2, 1); // Если элемент был видим, сохраняем полную непрозрачность
   const translateValue =
-    visibility < 1
-      ? `${(1 - visibility) * 80}%` // Двигается меньше на первых 50%
-      : `0%`; // Для больших экранов
+    hasBeenVisible || visibility >= 1
+      ? `0%` // Если был видим, остаётся на месте
+      : `${(1 - visibility) * 80}%`; // Плавное движение
 
   return (
     <div
