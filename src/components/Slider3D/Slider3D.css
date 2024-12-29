@@ -94,7 +94,7 @@
 @media screen and (max-width: 1023px) {
   .banner .slider {
     width: 160px;
-    height: 200px;
+    height: 160px;
     left: calc(50% - 80px);
   }
   .banner .slider .item {
@@ -123,7 +123,7 @@
 @media screen and (max-width: 767px) {
   .banner .slider {
     width: 100px;
-    height: 150px;
+    height: 100px;
     left: calc(50% - 50px);
   }
   .banner .slider .item {
