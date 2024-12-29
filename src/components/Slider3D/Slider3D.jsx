@@ -15,34 +15,34 @@ const Slider3D = () => {
     <div className="banner">
       <div className="slider" style={{ "--quantity": 10 }}>
         <div className="item" style={{ "--position": 1 }}>
-          <img src={album1} alt="" />
+          <img loading="lazy" src={album1} alt="" />
         </div>
         <div className="item" style={{ "--position": 2 }}>
-          <img src={album2} alt="" />
+          <img loading="lazy" src={album2} alt="" />
         </div>
         <div className="item" style={{ "--position": 3 }}>
-          <img src={album3} alt="" />
+          <img loading="lazy" src={album3} alt="" />
         </div>
         <div className="item" style={{ "--position": 4 }}>
-          <img src={album4} alt="" />
+          <img loading="lazy" src={album4} alt="" />
         </div>
         <div className="item" style={{ "--position": 5 }}>
-          <img src={album5} alt="" />
+          <img loading="lazy" src={album5} alt="" />
         </div>
         <div className="item" style={{ "--position": 6 }}>
-          <img src={album6} alt="" />
+          <img loading="lazy" src={album6} alt="" />
         </div>
         <div className="item" style={{ "--position": 7 }}>
-          <img src={album7} alt="" />
+          <img loading="lazy" src={album7} alt="" />
         </div>
         <div className="item" style={{ "--position": 8 }}>
-          <img src={album8} alt="" />
+          <img loading="lazy" src={album8} alt="" />
         </div>
         <div className="item" style={{ "--position": 9 }}>
-          <img src={album9} alt="" />
+          <img loading="lazy" src={album9} alt="" />
         </div>
         <div className="item" style={{ "--position": 10 }}>
-          <img src={album10} alt="" />
+          <img loading="lazy" src={album10} alt="" />
         </div>
       </div>
       <div className="content">
