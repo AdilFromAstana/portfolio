@@ -41,7 +41,9 @@ const ServiceList = () => {
 
   return (
     <div>
-      <div>Почему я?</div>
+      <div className="title">
+        <h2>Почему я?</h2>
+      </div>
       <div className="services-section">
         {services.map((service, index) => (
           <ServiceItem

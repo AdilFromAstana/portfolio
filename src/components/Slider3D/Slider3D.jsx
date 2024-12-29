@@ -13,6 +13,9 @@ import album10 from "../../images/slider_3d/pox-wave.jpg";
 const Slider3D = () => {
   return (
     <div className="banner">
+      <div className="title">
+        <h2>Оцените эффект 3D карусели</h2>
+      </div>
       <div className="slider" style={{ "--quantity": 10 }}>
         <div className="item" style={{ "--position": 1 }}>
           <img loading="lazy" src={album1} alt="" />
@@ -44,17 +47,6 @@ const Slider3D = () => {
         <div className="item" style={{ "--position": 10 }}>
           <img loading="lazy" src={album10} alt="" />
         </div>
-      </div>
-      <div className="content">
-        <h1 data-content="CSS ONLY">CSS ONLY</h1>
-        <div className="author">
-          <h2>LUN DEV</h2>
-          <p>
-            <b>Web Design</b>
-          </p>
-          <p>Subscribe to the channel to watch many interesting videos</p>
-        </div>
-        <div className="model"></div>
       </div>
     </div>
   );

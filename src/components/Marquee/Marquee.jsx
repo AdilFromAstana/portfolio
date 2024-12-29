@@ -94,7 +94,9 @@ const Marquee = () => {
 
   return (
     <div>
-      <h2>Что я могу предложить</h2>
+      <div className="title">
+        <h2>Что я могу предложить</h2>
+      </div>
       <div>
         {marqueeArray.map((marquee) => {
           return (

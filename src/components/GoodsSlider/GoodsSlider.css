@@ -94,13 +94,13 @@
   padding: 5px 0;
   border: none;
   border-bottom: 1px solid #555;
-  background-color: transparent;
+  background-color: #eee;
   font-weight: bold;
   letter-spacing: 3px;
   transition: background 0.5s;
 }
-.carousel .list .item .introduce .seeMore:hover {
-  background: #eee;
+.seeMore:hover {
+  cursor: pointer;
 }
 .carousel .list .item:nth-child(1) {
   transform: var(--item1-transform);
@@ -273,12 +273,15 @@
 }
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
   font-family: Poppins;
-  background-color: transparent;
+  background-color: #eee;
   border: 1px solid #5555;
   margin-left: 5px;
   padding: 5px 10px;
   letter-spacing: 2px;
   font-weight: 500;
+}
+.checkout button:hover {
+  cursor: pointer;
 }
 .carousel.carousel.showDetail
   .list
@@ -316,20 +319,29 @@
 }
 #prev,
 #next {
+  position: absolute;
+  font-size: 30px;
   cursor: pointer;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   font-family: monospace;
   border: 1px solid #5555;
-  font-size: large;
   bottom: 20%;
   left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #next {
   left: unset;
   right: 10%;
 }
+
+#back:hover {
+  cursor: pointer;
+}
+
 #back {
   position: absolute;
   z-index: 100;
@@ -341,7 +353,7 @@
   font-family: Poppins;
   font-weight: bold;
   letter-spacing: 3px;
-  background-color: transparent;
+  background-color: #eee;
   padding: 10px;
   /* opacity: 0; */
   transition: opacity 0.5s;

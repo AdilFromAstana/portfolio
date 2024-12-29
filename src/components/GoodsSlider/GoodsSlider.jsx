@@ -75,6 +75,9 @@ const GoodsSlider = () => {
 
   return (
     <div style={{ padding: "10vh 0px" }} className="carousel-wrapper">
+      <div className="title">
+        <h2>Это мог быть католог вашей продукции</h2>
+      </div>
       <div className="carousel" ref={carouselRef}>
         <div className="list" ref={listRef}>
           {goods.map((item, index) => (
