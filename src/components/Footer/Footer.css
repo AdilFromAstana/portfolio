@@ -1,126 +1,130 @@
 /* Общий стиль футера */
 .footer {
-    background-color: #f5f5dc;
-    /* Цвет похож на текстуру бумаги */
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.5;
+  border-top: 1px solid white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  color: white;
 }
 
 .footer-logo {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .contact-info p {
-    font-size: 0.9rem;
-    margin: 5px 0;
+  font-size: 0.9rem;
+  margin: 5px 0;
 }
 
 .contact-info a {
-    font-size: 1rem;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .footer-talk {
-    margin: 20px 0;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 20px 0;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .arrow-link {
-    font-size: 2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
-    transition: transform 0.2s;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s;
 }
 
 .arrow-link:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .footer-links details {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 .footer-links summary {
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .footer-links ul {
-    margin: 10px 0 0 10px;
-    padding: 0;
-    list-style: none;
+  margin: 10px 0 0 10px;
+  padding: 0;
+  list-style: none;
 }
 
 .footer-links ul li a {
-    font-size: 0.9rem;
-    color: #333;
-    text-decoration: none;
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
 }
 
 .footer-links ul li a:hover {
-    color: #000;
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Социальные иконки */
 .footer-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    font-size: 0.9rem;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.footer-bottom a {
-    color: #000;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-decoration: none;
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-decoration: none;
 }
 
 .footer-legal {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-legal p {
-    cursor: pointer;
-    font-size: 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .footer-legal p:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Адаптивный дизайн */
 @media (max-width: 768px) {
-    .footer-container {
-        text-align: center;
-    }
+  .footer-container {
+    text-align: center;
+  }
 
-    .footer-talk {
-        flex-direction: column;
-        gap: 10px;
-    }
+  .footer-talk {
+    margin: 0;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .footer-links details {
-        text-align: center;
-    }
+  .footer-links details {
+    text-align: center;
+  }
 }

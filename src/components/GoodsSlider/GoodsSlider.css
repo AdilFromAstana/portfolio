@@ -86,10 +86,8 @@
 }
 .carousel .list .item .introduce .des {
   font-size: small;
-  color: #5559;
 }
 .carousel .list .item .introduce .seeMore {
-  font-family: Poppins;
   margin-top: 1.2em;
   padding: 5px 0;
   border: none;
@@ -239,7 +237,7 @@
 }
 .carousel.showDetail .list .item:nth-child(2) .detail {
   opacity: 1;
-  width: 100%;
+  width: 50%;
   position: absolute;
   right: 0;
   top: 50%;
@@ -275,7 +273,6 @@
   font-weight: bold;
 }
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button {
-  font-family: Poppins;
   background-color: #eee;
   border: 1px solid #5555;
   margin-left: 5px;
@@ -329,7 +326,6 @@
   position: absolute;
   font-size: 30px;
   cursor: pointer;
-  font-family: monospace;
   background-color: transparent;
   bottom: 20%;
   left: 10%;
@@ -356,7 +352,6 @@
   transform: translateX(-50%);
   border: none;
   border-bottom: 1px solid #555;
-  font-family: Poppins;
   letter-spacing: 3px;
   color: white;
   background-color: transparent;
@@ -406,11 +401,16 @@
     top: 40%;
   }
 
+  .carousel .list .item:nth-child(2) .introduce .des {
+    text-align: left;
+  }
+
   .carousel .list .item img {
     width: 40%;
     top: 40%;
   }
   .carousel.showDetail .list .item:nth-child(2) .detail {
+    width: 100%;
     font-size: small;
   }
   .carousel.showDetail .list .item:nth-child(2) .detail-col {

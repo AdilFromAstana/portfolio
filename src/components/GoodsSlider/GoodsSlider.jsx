@@ -89,9 +89,10 @@ const GoodsSlider = () => {
                 <div className="title">DESIGN SLIDER</div>
                 <div className="topic">Aerphone</div>
                 <div className="des">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Officia, laborum cumque dignissimos quidem atque et eligendi
-                  aperiam voluptates beatae maxime.
+                  Высококачественные наушники с чистым звучанием, стильным
+                  дизайном и удобной посадкой. Идеальны для музыки, фильмов и
+                  игр. Прочные материалы, современный стиль и внимание к деталям
+                  делают их незаменимыми.
                 </div>
                 <button className="seeMore" onClick={handleSeeMore}>
                   Детали <GoArrowUpRight />
@@ -101,11 +102,10 @@ const GoodsSlider = () => {
                 <div className="detail-col">
                   <div className="title">Aerphone GHTK</div>
                   <div className="des">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Dolor, reiciendis suscipit nobis nulla animi, modi explicabo
-                    quod corrupti impedit illo, accusantium in eaque nam quia
-                    adipisci aut distinctio porro eligendi. Reprehenderit
-                    nostrum consequuntur ea!
+                    Высококачественные наушники с чистым звучанием, стильным
+                    дизайном и удобной посадкой. Идеальны для музыки, фильмов и
+                    игр. Прочные материалы, современный стиль и внимание к
+                    деталям делают их незаменимыми.
                   </div>
                   <div className="specifications">
                     {[
@@ -122,17 +122,15 @@ const GoodsSlider = () => {
                     ))}
                   </div>
                   <div className="checkout">
-                    <button>ADD TO CART</button>
-                    <button>CHECKOUT</button>
+                    <button>В КОРЗИНУ</button>
+                    <button>КУПИТЬ СЕЙЧАС</button>
                   </div>
                 </div>
                 <div className="mobile-specifications">
                   {[
-                    { label: "Used Time", value: "6 hours" },
-                    { label: "Charging port", value: "Type-C" },
-                    { label: "Compatible", value: "Android" },
+                    { label: "Время работы", value: "6 часов" },
                     { label: "Bluetooth", value: "5.3" },
-                    { label: "Controlled", value: "Touch" },
+                    { label: "Совместимость", value: "Android" },
                   ].map((spec, specIndex) => (
                     <div key={specIndex}>
                       <p>{spec.label}</p>
