@@ -6,6 +6,8 @@ import thirdImg from "../../images/goods_silder/img3.png";
 import fourtImg from "../../images/goods_silder/img4.png";
 import fifthImg from "../../images/goods_silder/img5.png";
 import sixthImg from "../../images/goods_silder/img6.png";
+import { AiOutlineUpCircle } from "react-icons/ai";
+import { GoArrowUpRight } from "react-icons/go";
 
 const GoodsSlider = () => {
   const goods = [
@@ -92,21 +94,39 @@ const GoodsSlider = () => {
                   aperiam voluptates beatae maxime.
                 </div>
                 <button className="seeMore" onClick={handleSeeMore}>
-                  SEE MORE &#8599;
+                  Детали <GoArrowUpRight />
                 </button>
               </div>
               <div className="detail">
-                <div className="title">Aerphone GHTK</div>
-                <div className="des">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Dolor, reiciendis suscipit nobis nulla animi, modi explicabo
-                  quod corrupti impedit illo, accusantium in eaque nam quia
-                  adipisci aut distinctio porro eligendi. Reprehenderit nostrum
-                  consequuntur ea! Accusamus architecto dolores modi ducimus
-                  facilis quas voluptatibus! Tempora ratione accusantium magnam
-                  nulla tenetur autem beatae.
+                <div className="detail-col">
+                  <div className="title">Aerphone GHTK</div>
+                  <div className="des">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Dolor, reiciendis suscipit nobis nulla animi, modi explicabo
+                    quod corrupti impedit illo, accusantium in eaque nam quia
+                    adipisci aut distinctio porro eligendi. Reprehenderit
+                    nostrum consequuntur ea!
+                  </div>
+                  <div className="specifications">
+                    {[
+                      { label: "Used Time", value: "6 hours" },
+                      { label: "Charging port", value: "Type-C" },
+                      { label: "Compatible", value: "Android" },
+                      { label: "Bluetooth", value: "5.3" },
+                      { label: "Controlled", value: "Touch" },
+                    ].map((spec, specIndex) => (
+                      <div key={specIndex}>
+                        <p>{spec.label}</p>
+                        <p>{spec.value}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="checkout">
+                    <button>ADD TO CART</button>
+                    <button>CHECKOUT</button>
+                  </div>
                 </div>
-                <div className="specifications">
+                <div className="mobile-specifications">
                   {[
                     { label: "Used Time", value: "6 hours" },
                     { label: "Charging port", value: "Type-C" },
@@ -120,10 +140,6 @@ const GoodsSlider = () => {
                     </div>
                   ))}
                 </div>
-                <div className="checkout">
-                  <button>ADD TO CART</button>
-                  <button>CHECKOUT</button>
-                </div>
               </div>
             </div>
           ))}
@@ -131,13 +147,17 @@ const GoodsSlider = () => {
 
         <div className="arrows">
           <button id="prev" onClick={() => showSlider("prev")}>
-            &lt;
+            <AiOutlineUpCircle
+              style={{ rotate: "-90deg", color: "white", fontSize: "2.5rem" }}
+            />
           </button>
           <button id="next" onClick={() => showSlider("next")}>
-            &gt;
+            <AiOutlineUpCircle
+              style={{ rotate: "90deg", color: "white", fontSize: "2.5rem" }}
+            />
           </button>
           <button id="back" onClick={handleBack}>
-            See All &#8599;
+            Каталог <GoArrowUpRight />
           </button>
         </div>
       </div>

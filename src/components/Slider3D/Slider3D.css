@@ -57,10 +57,14 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .banner {
+    height: 60vh;
+  }
   .banner .slider {
     width: 100px;
     height: 100px;
     left: calc(50% - 50px);
+    bottom: 20%;
   }
   .banner .slider .item {
     transform: rotateY(

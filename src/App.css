@@ -68,3 +68,8 @@ body::-webkit-scrollbar {
 .title h2 {
   font-size: 3em;
 }
+@media screen and (max-width: 767px) {
+  .title h2 {
+    font-size: 2em;
+  }
+}
